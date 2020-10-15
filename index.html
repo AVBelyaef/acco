@@ -1,7 +1,19 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta property="og:title" content="Аккордеонист Александр Беляев" />
+    <meta
+      property="og:description"
+      content="Аккордеонист на свадьбу, праздник, юбилей, корпоратив,
+      французский аккордеонист, джазовый аккордеонист."
+    />
+    <meta
+      property="og:image"
+      content="https://accordionist.info/assets/img/slide1.png"
+    />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://accordionist.info/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Аккордеонист Александр Беляев" />
     <meta
@@ -13,7 +25,12 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" /> 
+    <link rel="stylesheet" href="style.min.css" />
+    <script
+      src="https://kit.fontawesome.com/2d24ee1edd.js"
+      crossorigin="anonymous"
+    ></script>
+ 
     <title>Аккордеонист на праздник!</title>
   </head>
   <body>
@@ -24,15 +41,21 @@
         </div>
         <div class="video-wrapper">
           <video autoplay muted loop class="video__content">
-            <source src="slide.mp4" />
+            <source src="./assets/slide.mp4" />
           </video>
         </div>
         <div class="big-wrap">
           <nav class="nav" id="sticker">
             <div class="nav-wrapper">
               <a class="nav__logo" href="#header">
-                <img src="img/logo.png" alt="Логотип Alessandro" />
+                <img src="/assets/img/logo.png" alt="Логотип Alessandro" />
               </a>
+              <input type="checkbox" id="btn" class="hidden-menu" />
+              <label class="btn-menu" for="btn">
+                <span class="btn-menu__first"></span>
+                <span class="btn-menu__second"></span>
+                <span class="btn-menu__third"></span>
+              </label>
               <ul class="nav__list">
                 <li class="nav__item nav__item--hiden">
                   <a href="#header">Главная</a>
@@ -63,13 +86,13 @@
           </div>
           <div class="about__cards">
             <div class="card">
-              <div class="card__front">
+              <div class="card__front" data-delighter>
                 <img
-                  src="alessandro.jpg"
+                  src="assets/img/about/alessandro.jpg"
                   alt="Аккордеонист Александр Беляев"
                 />
               </div>
-              <div class="card__back">
+              <div class="card__back" data-delighter>
                 <h3>ALESSANDRO</h3>
                 <p>
                   аккордеонист на свадьбу, праздник, юбилей, корпоратив,
@@ -77,11 +100,11 @@
                 </p>
               </div>
             </div>
-            <div class="card card">
-              <div class="card__front card__front">
-                <img src="frio.jpg" alt="ДУЭТ FRIO"/>
+            <div class="card card--reverse">
+              <div class="card__front card__front--reverse" data-delighter>
+                <img src="assets/img/about/frio.jpg" alt="ДУЭТ FRIO" />
               </div>
-              <div class="card__back card__back">
+              <div class="card__back card__back--reverse" data-delighter>
                 <h3>ДУЭТ FRIO</h3>
                 <p>
                   — это прохладный и свежий музыкальный коктейль из чёрно-белых
@@ -102,7 +125,7 @@
           </div>
           <ul class="services__list">
             <li class="services__item">
-              <span class="services__icon"  >
+              <span class="services__icon" data-delighter>
                 <i class="fas fa-child"></i>
               </span>
               <div class="services__content">
@@ -111,7 +134,7 @@
               </div>
             </li>
             <li class="services__item">
-              <span class="services__icon"  >
+              <span class="services__icon" data-delighter>
                 <i class="fas fa-music"></i>
               </span>
               <div class="services__content">
@@ -125,7 +148,7 @@
               </div>
             </li>
             <li class="services__item">
-              <span class="services__icon">
+              <span class="services__icon" data-delighter>
                 <i class="fas fa-users"></i>
               </span>
               <div class="services__content">
@@ -139,7 +162,7 @@
               </div>
             </li>
             <li class="services__item">
-              <span class="services__icon">
+              <span class="services__icon" data-delighter>
                 <i class="fas fa-star"></i>
               </span>
               <div class="services__content">
@@ -161,11 +184,11 @@
           <div id="gallery" class="gallery-wrap">
             <img
               alt="Аккордеонист Александр Беляев"
-              src="./assets/img/gallery/img_1.jpg"
+              src="./assets/img/gallery/img_2.jpg"
             />
             <img
               alt="Аккордеонист Александр Беляев"
-              src="./assets/img/gallery/img_2.jpg"
+              src="./assets/img/gallery/img_6.jpg"
             />
             <img
               alt="Аккордеонист Александр Беляев"
@@ -177,11 +200,15 @@
             />
             <img
               alt="Аккордеонист Александр Беляев"
+              src="./assets/img/gallery/img_1.jpg"
+            />
+            <img
+              alt="Аккордеонист Александр Беляев"
               src="./assets/img/gallery/img_5.jpg"
             />
             <img
               alt="Аккордеонист Александр Беляев"
-              src="./assets/img/gallery/img_6.jpg"
+              src="./assets/img/gallery/img_7.jpg"
             />
           </div>
         </div>
@@ -202,7 +229,7 @@
           <div class="section-title">
             <h2 class="section-title__title">Мои клиенты</h2>
           </div>
-          <div class="logos clients__logos">
+          <div class="logos clients__logos" data-delighter>
             <img src="/assets/img/clients/client1.png" alt="Гидромаш" />
             <img src="/assets/img/clients/client2.png" alt="ГАМА" />
             <img src="/assets/img/clients/client3.png" alt="Сибур" />
@@ -220,47 +247,50 @@
           <div class="section-title">
             <h2 class="section-title__title">Контакты</h2>
           </div>
-          <div class="map__image"  >
-            <img src="/assets/img/map.png" alt="адрес Пискунова 40" />
+          <div class="map__image" data-delighter>
+            <img src="./assets/img/map.png" alt="адрес Пискунова 40" />
           </div>
         </div>
       </section>
     </main>
     <footer class="contacts">
       <div class="container">
-          <div class="contacts__email">
+        <div class="contacts__wrapper">
+          <div class="contacts__email" data-delighter>
             <i class="far fa-envelope"></i>
             <a href="mailto:INFO@ACCORDIONIST.INFO">INFO@ACCORDIONIST.INFO</a>
           </div>
-          <ul class="contacts__social-list"  >
+          <ul class="contacts__social-list" data-delighter>
             <li class="contacts__social-item">
-              <a href="#"
+              <a href="https://www.facebook.com/avbelyaef"
                 ><i class="fab fa-facebook-square"></i>
                 <span class="visually-hidden">Фейсбук</span>
               </a>
             </li>
             <li class="contacts__social-item">
-              <a href="#"
+              <a href="https://vk.com/belyaev_av"
                 ><i class="fab fa-vk"></i>
                 <span class="visually-hidden">Вконтакте</span>
               </a>
             </li>
             <li class="contacts__social-item">
-              <a href="#"
+              <a href="https://www.instagram.com/alessandromusik/"
                 ><i class="fab fa-instagram"></i>
                 <span class="visually-hidden">Инстаграм</span></a
               >
             </li>
           </ul>
-          <div class="contacts__phone">
+          <div class="contacts__phone" data-delighter>
             <i class="fas fa-phone"></i>
-            <a href="tel:+7(999)999-99-99">+7(999)999-99-99</a>
+            <a href="tel:+7(905)869-14-23">7(905)869-14-23</a>
           </div>
+        </div>
       </div>
       <p class="copyright">
         Все права защищены © 2020
         <a href="https://accordionist.info">Alessandro</a>
       </p>
     </footer>
+
   </body>
 </html>
