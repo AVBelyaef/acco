@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta property="og:title" content="Аккордеонист Александр Беляев" />
@@ -26,11 +26,17 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.min.css" />
+    <link rel="stylesheet" type="text/css" href="/js/unite-gallery.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/click-scroll.js"></script>
     <script
       src="https://kit.fontawesome.com/2d24ee1edd.js"
       crossorigin="anonymous"
     ></script>
- 
+    <script src="/js/jquery.sticky.js"></script>
+    <script src="/js/unitegallery.min.js"></script>
+    <script src="/js/ug-theme-tiles.js"></script>
+    <script type="text/javascript" src="/js/delighters.min.js"></script>
     <title>Аккордеонист на праздник!</title>
   </head>
   <body>
@@ -41,7 +47,7 @@
         </div>
         <div class="video-wrapper">
           <video autoplay muted loop class="video__content">
-            <source src="./assets/slide.mp4" />
+            <source src="/assets/slide.mp4" />
           </video>
         </div>
         <div class="big-wrap">
@@ -184,31 +190,31 @@
           <div id="gallery" class="gallery-wrap">
             <img
               alt="Аккордеонист Александр Беляев"
-              src="./assets/img/gallery/img_2.jpg"
+              src="/assets/img/gallery/img_2.jpg"
             />
             <img
               alt="Аккордеонист Александр Беляев"
-              src="./assets/img/gallery/img_6.jpg"
+              src="/assets/img/gallery/img_6.jpg"
             />
             <img
               alt="Аккордеонист Александр Беляев"
-              src="./assets/img/gallery/img_3.jpg"
+              src="/assets/img/gallery/img_3.jpg"
             />
             <img
               alt="Аккордеонист Александр Беляев"
-              src="./assets/img/gallery/img_4.jpg"
+              src="/assets/img/gallery/img_4.jpg"
             />
             <img
               alt="Аккордеонист Александр Беляев"
-              src="./assets/img/gallery/img_1.jpg"
+              src="/assets/img/gallery/img_1.jpg"
             />
             <img
               alt="Аккордеонист Александр Беляев"
-              src="./assets/img/gallery/img_5.jpg"
+              src="/assets/img/gallery/img_5.jpg"
             />
             <img
               alt="Аккордеонист Александр Беляев"
-              src="./assets/img/gallery/img_7.jpg"
+              src="/assets/img/gallery/img_7.jpg"
             />
           </div>
         </div>
@@ -248,7 +254,7 @@
             <h2 class="section-title__title">Контакты</h2>
           </div>
           <div class="map__image" data-delighter>
-            <img src="./assets/img/map.png" alt="адрес Пискунова 40" />
+            <img src="/assets/img/map.png" alt="адрес Пискунова 40" />
           </div>
         </div>
       </section>
@@ -291,6 +297,21 @@
         <a href="https://accordionist.info">Alessandro</a>
       </p>
     </footer>
-
+    <script>
+      jQuery(document).ready(function () {
+        jQuery("#gallery").unitegallery({
+          gallery_theme: "tiles",
+          lightbox_type: "compact",
+        });
+        $("#sticker")
+          .sticky({ bottomSpacing: 0, zIndex: 10 })
+          .on("sticky-start", function () {
+            $(".nav").addClass("nav-stick");
+          })
+          .on("sticky-end", function () {
+            $(".nav").removeClass("nav-stick");
+          });
+      });
+    </script>
   </body>
 </html>
