@@ -26,11 +26,17 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.min.css" />
+    <link rel="stylesheet" type="text/css" href="/js/unite-gallery.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/click-scroll.js"></script>
     <script
       src="https://kit.fontawesome.com/2d24ee1edd.js"
       crossorigin="anonymous"
     ></script>
-
+    <script src="/js/jquery.sticky.js"></script>
+    <script src="/js/unitegallery.min.js"></script>
+    <script src="/js/ug-theme-tiles.js"></script>
+    <script type="text/javascript" src="/js/delighters.min.js"></script>
     <title>Аккордеонист на праздник!</title>
   </head>
   <body>
@@ -291,6 +297,21 @@
         <a href="https://accordionist.info">Alessandro</a>
       </p>
     </footer>
-
+    <script>
+      jQuery(document).ready(function () {
+        jQuery("#gallery").unitegallery({
+          gallery_theme: "tiles",
+          lightbox_type: "compact",
+        });
+        $("#sticker")
+          .sticky({ bottomSpacing: 0, zIndex: 10 })
+          .on("sticky-start", function () {
+            $(".nav").addClass("nav-stick");
+          })
+          .on("sticky-end", function () {
+            $(".nav").removeClass("nav-stick");
+          });
+      });
+    </script>
   </body>
 </html>
